@@ -197,7 +197,6 @@ public class MainPanel
                     rowData[1] = table1.getValueAt(selectedRow, 1);
                     rowData[2] = table1.getValueAt(selectedRow, 2);
                     internetOrder.add(items[selectedRow]);
-                    // Добавляем выбранную позицию в таблицу заказа
                     model.addRow(rowData);
                     //System.out.println(items[selectedRow].getName());
                 }
@@ -596,9 +595,6 @@ public class MainPanel
                     public void actionPerformed(ActionEvent e) {
                         panel_1.setVisible(false);
                         panel5.setVisible(true);
-                        //panel4.setVisible(true);
-                        //panel2.setVisible(true);
-                        //panel1.setVisible(true);
                     }
                 });
                 button_2.addActionListener(new ActionListener() {
@@ -623,7 +619,7 @@ public class MainPanel
                 mainPanel1.add(panel_2);
 
                 tempPanel1.add(mainPanel1);
-                tempPanel1.add(panel5, "Panel5"); // Используйте "Panel5", чтобы связать с вашей панелью
+                tempPanel1.add(panel5, "Panel5");
                 frame1.add(tempPanel1);
             }
         });
@@ -635,8 +631,6 @@ public class MainPanel
                 cardLayout.show(tempPanel, "MainPanel");
             }
         });
-
-        //mainPanel.add(tempPanel, "MainPanel");
         mainPanel.add(panel1);
         mainPanel.add(panel2);
         tempPanel.add(mainPanel, "MainPanel");
